@@ -62,6 +62,23 @@ else:
 6. Escreva um programa que, dados dois números inteiros, mostre na tela o maior deles,
 assim como a diferença existente entre ambos.
 """
+import sys
+
+num1 = int(input('Digite o primeiro número: '))
+num2 = int(input('Digite o segundo número: '))
+
+if num1 == num2:
+    print(f'Os números digitados são iguais!')
+    sys.exit()
+elif num1 > num2:
+    print(f'O número maior é o: {num1}')
+    numeroMaior = num1
+    numeroMenor = num2
+else:
+    print(f'O número maior é o: {num2}')
+    numeroMaior = num2
+    numeroMenor = num1
+print(f'A diferença entre os números é de: {numeroMaior - numeroMenor}')
 
 """
 7. Faça um programa que receba dois números e mostre o maior. Se por acaso, os dois números forem iguais,
@@ -76,3 +93,44 @@ elif num1 > num2:
     print(f'O número maior é o: {num1}')
 else:
     print(f'O número maior é o: {num2}')
+
+"""
+8. Faça um programa que leia duas notas de um aluno, verifique se as notas são válidas e exiba na tela a média
+destas notas. Uma nota válida deve ser, obrigatoriamente, um valor entre 0.0 e 10.0, onde caso a nota não possua
+valor válido, este fato deve ser informado ao usuário e o programa termina.
+"""
+import sys
+
+num1 = float(input('Digite a primeira nota: '))
+if num1 < 0.0 or num1 > 10.0:
+    print(f'A primeira nota informada não é válida!')
+    sys.exit()
+
+num2 = float(input('Digite a primeira nota: '))
+if num2 < 0.0 or num2 > 10.0:
+    print(f'A segunda nota informada não é válida!')
+    sys.exit()
+
+print(f'A média do aluno é: {(num1 + num2) / 2}')
+
+"""
+9. Leia o salário de um trabalhador e o valor da prestação de um empréstimo. Se a prestação for maior que
+20% do salário imprima: Empréstimo não concedido, caso contrário imprima: Empréstimo concedido.
+"""
+import sys
+
+salario = float(input('Digite o valor do seu salário: '))
+if salario <= 0:
+    print(f'Valor de salário inválido!')
+    sys.exit()
+
+emprestimo = float(input('Digite o valor do empréstimo que deseja: '))
+if emprestimo <= 0:
+    print(f'Valor de empréstimo inválido!')
+    sys.exit()
+
+if emprestimo > (salario * 0.2):
+    print(f'Empréstimo não concedido!')
+else:
+    print(f'Empréstimo concedido!')
+    print(f'Saldo atualizado: {salario + emprestimo}')
