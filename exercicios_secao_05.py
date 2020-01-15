@@ -152,7 +152,7 @@ if sexo not in ['M', 'm', 'F', 'f']:
 
 if sexo in ['M', 'm']:
     pesoIdeal = (72.7 * altura) - 58
-    print(f'Seu peso ideal é: {pesoIdeal}Kg')
+    print(f'Seu peso ideal é: {pesoIdeal} Kg')
 else:
     pesoIdeal = (62.1 * altura) - 44.7
-    print(f'Seu peso ideal é: {pesoIdeal}Kg')
+    print(f'Seu peso ideal é: {pesoIdeal} Kg')
